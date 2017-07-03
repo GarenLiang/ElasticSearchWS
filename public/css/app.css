@@ -1,0 +1,219 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eff0f1;
+  font-size: 14pt;
+  color: #333;
+}
+
+a {
+  color: #5fbf63;
+}
+a:hover  { color: #6ed873; }
+a:active { color: #5fbf63; }
+
+.challenge-desc {
+  text-align: center;
+  padding-top: 1em;
+  margin: 0 3em;
+  margin-bottom: -1em;
+}
+
+#search-box {
+  margin: 0 auto;
+  padding-top: 3em;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid #333;
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: lighter;
+}
+::-moz-placeholder { /* older Firefox*/
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: lighter;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: lighter;
+} 
+::-ms-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: lighter;
+}
+
+#query-text {
+  font-size: 32pt;
+  border: 0em;
+  text-align: center;
+}
+#query-text:focus { outline: none; }
+
+#select-box {
+  margin: 0 auto;
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+#submit-button {
+  margin-top: 0.5em;
+  border: none;
+  color: white;
+  background-color: #4CAF50;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22pt;
+  font-weight: 300;
+  padding: 0.4em 0.6em;
+  border-radius: 0.3em;
+}
+
+#submit-button:hover  { background-color: #5fb762; }
+#submit-button:active { background-color: #4CAF50; }
+#submit-button:focus  { outline: none; }
+
+#content {
+  margin: 0% 10%;
+  padding: 0% 5% 5% 5%;
+  background-color: white;
+  height: auto;
+  min-height: 100%;
+  font-size: 16pt;
+  display: flex;
+  flex-flow: column;
+}
+
+.profilePic {
+  border-radius: 0.2em;
+  padding-top: 0.1em;
+}
+
+.userName {
+  padding-left: 1em;
+  padding-right: 2em;
+  font-weight: bold;
+}
+
+.tweetText {
+  padding-right: 1.5em;
+}
+
+.tweetText a {
+  display: inline;
+}
+
+.tweetText .fa {
+  vertical-align: middle;
+  padding-left: 0.2em;
+}
+
+.tweetStats {
+  padding-right: 1.1em;
+  font-size: 14pt;
+}
+
+.tweetStats .fa {
+  padding-right: 0.5em;
+  display: inline;
+}
+
+.numFavs {
+  color: #dc5353;
+  padding-bottom: 0.5em;
+}
+
+.numRetweets {
+  color: #ffdd20;
+}
+
+.tweetDate {
+  font-size: 13pt;
+  min-width: 7em;
+}
+
+.box .row.header {
+  flex: 0 1 auto;
+}
+
+.box .row.content {
+  flex: 1 1 auto;
+}
+
+.box .row.footer {
+  flex: 0 1 40px;
+}
+
+.big-spacing {
+  line-height: 200%;
+}
+
+#search-results {
+  padding-top: 1em;
+  width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 1em 0em;
+}
+
+#footer {
+  background-color: #333;
+  text-align: center;
+  padding: 2em 0em;
+  color: white;
+}
+
+#contact-me {
+  list-style-type: none;
+}
+
+.code {
+  font-family: "Courier New", Courier monospace;
+  background-color: #eff0f1;
+  padding: 0.18em;
+  padding-left: 0.4em;
+  padding-right: 0.35em;
+  border-radius: 0.2em;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active        { background-color: #4CAF50; }
+ul.topnav li a.active:hover  { background-color: #5fb762; }
+ul.topnav li a.active:active { background-color: #4CAF50; }
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}

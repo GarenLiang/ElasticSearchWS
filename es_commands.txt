@@ -1,0 +1,118 @@
+# Useful Sense commands
+
+# important cluster metrics
+GET _cluster/health
+
+# all the indices that are in your cluster
+GET _cat/indices
+
+# add ?v to print headers
+GET _cat/indices?v
+
+# add ?format=json for a json response
+GET _cat/indices?format=json
+
+# use this to view available _cat APIs
+GET _cat
+
+# run a query against an index (defaults to match_all)
+GET {index}/_search
+
+GET .kibana/_search
+
+# each index has a set of mappings that define the schema of the data
+GET .kibana/_mappings
+
+# each index also has settings that contain metadata about the index
+GET .kibana/_settings
+
+# if you GET the index itself, the mappings and settings are included, along with some other data
+GET .kibana
+
+# create an index
+PUT test
+
+# add documents
+PUT test/person/1
+{
+  "name": "Sid",
+  "age": 23,
+  "hair_color": "Brown"
+}
+PUT test/person/2
+{
+  "name": "Lizzy",
+  "age": 19,
+  "hair_color": "Blonde"
+}
+PUT test/person/3
+{
+  "name": "Danny",
+  "age": 56,
+  "hair_color": "Gray"
+}
+PUT test/dog/1
+{
+  "name": "Frisco",
+  "age": 3,
+  "hair_color": "Brown",
+  "breed": "Jack Russell Terrier"
+}
+
+# let's look at the mappings ES has detected for us
+GET test/_mappings
+
+# retrieve a particular document
+GET test/person/2
+
+# search on your index
+GET test/_search
+
+# this is equivalent to the following:
+GET test/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+# you can easily scope a search to a particular type
+GET test/person/_search
+GET test/dog/_search
+
+# you can use an abbreviated query syntax with ?q=<query_string>
+GET test/_search?q=Sid
+
+# this is equivalent to the following:
+GET test/_search
+{
+  "query": {
+    "query_string": {
+      "query": "Sid"
+    }
+  }
+}
+
+# query_string supports boolean queries
+GET test/_search
+{
+  "query": {
+    "query_string": {
+      "query": "name:Sid OR name:Lizzy"
+    }
+  }
+}
+
+# one of many types of queries: the range query
+GET test/_search
+{
+  "query": {
+    "range": {
+      "age": {
+        "gt": 50
+      }
+    }
+  }
+}
+
+# read more at https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html

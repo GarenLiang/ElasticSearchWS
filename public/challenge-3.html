@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ES Workshop Challenge 3: Top Influencers</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Public Resources -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+<!-- es-workshop Resources -->
+<link rel="stylesheet" type="text/css" href="css/app.css">
+<link rel="icon" href="img/favicon.ico">
+<script src="js/challenge-3.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body class="box"><!-- Navbar -->
+<ul class="topnav row header">
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/challenge-1.html">1) Fuzzy Queries</a></li>
+  <li><a href="/challenge-2.html">2) Single-User</a></li>
+  <li><a href="/challenge-3.html">3) Top Influencers</a></li>
+  <li class="right"><a href="/about.html">About</a></li>
+</ul>
+<!-- Content -->
+<div id="content" class="row content">
+  <div class="challenge-desc">
+    <h1>Challenge 3: Top Influencers</h1>
+    <div class="big-spacing">
+      In <span class="code">public/js/challenge-3.js</span>, edit the function <span class="code">generateEsQuery()</span> to return a list of the top 100 tweets that have earned the most favorites, sorted in descending order of favorite count.
+    </div>
+  </div>
+
+  <div id="select-box">
+    <button id="submit-button" autofocus="autofocus" onclick="submitQuery()">Run Query</button>
+  </div>
+
+  <table id="search-results">
+  </table>
+</div>
+
+  </body>
+</html>
