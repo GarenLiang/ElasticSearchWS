@@ -4,8 +4,12 @@
 function generateEsQuery(queryString) {
   return {
     "query": {
-      "query_string": {
-        "query": queryString
+      "fuzzy": {
+        "text": {
+          "value": queryString,
+          "fuzziness": 1
+        }
       }
     }
   }
+}

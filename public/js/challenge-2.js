@@ -5,7 +5,7 @@ function generateEsQuery(queryString, selectedUser) {
   return {
     "query": {
       "query_string": {
-        "query": queryString
+        "query": "user.screen_name:" + selectedUser + " AND " + queryString
       }
     }
   }
