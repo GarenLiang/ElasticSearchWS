@@ -7,6 +7,12 @@ function generateEsQuery() {
       "query_string": {
         "query": "*"
       }
-    }
+    },
+    "size": 100,
+    "sort": [{
+      "favorite_count": {
+        "order": "desc"
+      }
+    }]
   }
 }
